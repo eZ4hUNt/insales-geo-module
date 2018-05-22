@@ -47,4 +47,8 @@
 3. Подключаем *modul-geo.js*
 4. Подключаем *modul-geo.css*
 5. Подключаем стили из файла *styles.css*
-5. Подключаем скрипт из файла script.js
+6. Подключаем скрипт из файла *script.js*
+## Сам скрипт и пример на GitHub
+https://github.com/eZ4hUNt/insales-geo-module/
+
+Пример: http://storeforhome.ru/
