@@ -4,27 +4,27 @@
 ![Гео-модуль для InSales (Preview #2)](https://github.com/eZ4hUNt/insales-geo-module/blob/master/preview%20%232.jpg)
 1. Добавляем в настройки темы
 ```
-	<fieldset>
-		<legend>ГЕО модуль</legend>
-		<table>
-			<tr>
-				<td><label for="geo_active">Включить</label></td>
-				<td><input name="geo_active" id="geo_active" type="checkbox"></td>
-			</tr>
-			<tr>
-				<td><label for="header_geo">Показывать в шапке</label></td>
-				<td><input name="header_geo" id="header_geo" type="checkbox"></td>
-			</tr>
-			<tr>
-				<td><label for="header_geo_popup">Спрашивать при первом заходе правильно ли определен город</label></td>
-				<td><input name="header_geo_popup" id="header_geo_popup" type="checkbox"></td>
-			</tr>
-		</table>
-	</fieldset>
+<fieldset>
+	<legend>ГЕО модуль</legend>
+	<table>
+		<tr>
+			<td><label for="geo_active">Включить</label></td>
+			<td><input name="geo_active" id="geo_active" type="checkbox"></td>
+		</tr>
+		<tr>
+			<td><label for="header_geo">Показывать в шапке</label></td>
+			<td><input name="header_geo" id="header_geo" type="checkbox"></td>
+		</tr>
+		<tr>
+			<td><label for="header_geo_popup">Спрашивать при первом заходе правильно ли определен город</label></td>
+			<td><input name="header_geo_popup" id="header_geo_popup" type="checkbox"></td>
+		</tr>
+	</table>
+</fieldset>
 ```
 2. Добавляем в шапку
 ```
-    {% if settings.geo_active and settings.header_geo %}
+{% if settings.geo_active and settings.header_geo %}
       <script>
         var geo_active = {% if settings.geo_active %}true{% else %}false{% endif %};
       </script>
@@ -41,8 +41,8 @@
 			</div>
 		  </div>
 		{% endif %}
-	  </div>
-	{% endif %}
+	</div>
+{% endif %}
 ```
 3. Подключаем *modul-geo.js*
 4. Подключаем *modul-geo.css*
