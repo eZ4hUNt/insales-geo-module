@@ -1,5 +1,6 @@
 # Гео-модуль для InSales
 ![Гео-модуль для InSales (Preview #1)](https://github.com/eZ4hUNt/insales-geo-module/blob/master/preview%20%231.jpg)
+
 ![Гео-модуль для InSales (Preview #2)](https://github.com/eZ4hUNt/insales-geo-module/blob/master/preview%20%232.jpg)
 1. Добавляем в настройки темы
 ```
