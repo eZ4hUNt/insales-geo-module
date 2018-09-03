@@ -662,6 +662,11 @@ function checkDelivery(country, region, city){
 			$('.js-geo-city').html('<span>Ваш город:</span> '+city+'<span class="js-geo-minterms"></span>');            
           }
 			$('.js-geo-mini').html('<div class="row"><div class="col-sm-6 col-xs-12"><div class="geo-mini-title">Доставка в город: <a href="'+geoDeliveryPageUrl+'" class="winbox" data-window="geo|geoCity">'+city+'</a></div><ul class="fa-ul geo-mini-table"></ul></div><div class="col-sm-6 col-xs-12"><div class="geo-mini-payments"><div class="geo-mini-title">Варианты оплаты</div><ul class="fa-ul geo-mini-payments-table"></ul></div></div></div>');
+		
+			if(template == 'checkout'){
+			    $('[name="shipping_address[state]"]').val(region);
+			    $('[name="shipping_address[city]"]').val(city);
+			}
 		}
 		$('.js-geo-city-short').html('Город: <span>'+city+''+((region.replace('г ', '') != city)?', '+region:'')+'</span>');
 		$('.js-geo-city-popup').html('Город доставки ваших покупок<br><strong>'+city+''+((region.replace('г ', '') != city)?', '+region:'')+'</strong>?');
@@ -671,6 +676,11 @@ function checkDelivery(country, region, city){
 		if(geoIsUpdate){
 			$('.js-geo-city').html('Доставка в страну:<br><a href="'+geoDeliveryPageUrl+'" class="winbox" data-window="geo|geoCity">'+$geoCountry+'</a><span class="js-geo-minterms"></span>');
 			$('.js-geo-mini').html('<div class="row"><div class="col-sm-6 col-xs-12"><div class="geo-mini-title">Доставка в страну: <a href="'+geoDeliveryPageUrl+'" class="winbox" data-window="geo|geoCity">'+$geoCountry+'</a></div><ul class="fa-ul geo-mini-table"></ul></div><div class="col-sm-6 col-xs-12"><div class="geo-mini-payments"><div class="geo-mini-title">Варианты оплаты</div><ul class="fa-ul geo-mini-payments-table"></ul></div></div></div>');
+		
+			if(template == 'checkout'){
+			    $('[name="shipping_address[state]"]').val(region);
+			    $('[name="shipping_address[city]"]').val(city);
+			}
 		}
 		$('.js-geo-city-short').html('Страна: <span>'+$geoCountry+'</span>');
 		$('.js-geo-city-popup').html('Страна доставки ваших покупок<br><strong>'+$geoCountry+'</strong>?');
